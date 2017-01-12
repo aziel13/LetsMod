@@ -1,0 +1,16 @@
+[
+{
+  "modid": "LetsMod",
+  "name": "Lets Mod",
+  "description": "Lets Mod Reboot tutorial.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["aziel13"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
