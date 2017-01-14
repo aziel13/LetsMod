@@ -1,6 +1,10 @@
 package com.aziel13.letsmod;
 
+import com.aziel13.letsmod.handler.ConfigurationHandler;
 import com.aziel13.letsmod.proxy.IProxy;
+import com.aziel13.letsmod.reference.Reference;
+import net.minecraftforge.common.config.Configuration;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
@@ -11,27 +15,30 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
  * Created by Aziel13 on 1/11/2017.
  */
 
-@Mod(modid="LetsMod", name="LetsMod", version="1.10.2-1.0")
+@Mod(modid=Reference.MOD_ID, name=Reference.MOD_NAME, version=Reference.MOD_VERSION, guiFactory = Reference.GUI_FACTORY_CLASS)
 public class LetsMod {
 
-    @Mod.Instance("LetsMod")
+    @Mod.Instance(Reference.MOD_ID)
     public static LetsMod instance;
 
-    @SidedProxy(clientSide = "com.aziel13.letsmod.proxy.clientProxy", serverSide = "com.aziel13.letsmod.proxy.ServerProxy")
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static IProxy proxy;
 
     @Mod.EventHandler
-    public void preInit(FMLPreInitializationEvent preInit){
+    public void preInit(FMLPreInitializationEvent event){
+
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+        FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
     }
 
     @Mod.EventHandler
-    public void init(FMLInitializationEvent init) {
+    public void init(FMLInitializationEvent event) {
 
     }
 
     @Mod.EventHandler
-    public void postInit(FMLPostInitializationEvent postInit) {
+    public void postInit(FMLPostInitializationEvent event) {
 
     }
 
