@@ -1,6 +1,6 @@
 [
 {
-  "modid": "LetsMod",
+  "modid": "letsmod",
   "name": "Lets Mod",
   "description": "Lets Mod Reboot tutorial.",
   "version": "${version}",

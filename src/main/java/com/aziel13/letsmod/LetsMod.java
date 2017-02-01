@@ -1,9 +1,11 @@
 package com.aziel13.letsmod;
 
 import com.aziel13.letsmod.handler.ConfigurationHandler;
+import com.aziel13.letsmod.init.ModBlocks;
+import com.aziel13.letsmod.init.ModItems;
 import com.aziel13.letsmod.proxy.IProxy;
 import com.aziel13.letsmod.reference.Reference;
-import net.minecraftforge.common.config.Configuration;
+import com.aziel13.letsmod.utility.LogHelper;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -30,16 +32,24 @@ public class LetsMod {
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
         FMLCommonHandler.instance().bus().register(new ConfigurationHandler());
 
+        ModItems.preInit();
+        ModBlocks.preInit();
+
+        LogHelper.info("Pre Initialization Complete","Pre Initialization Complete");
     }
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
 
+        ModItems.init();
+        ModBlocks.init();
+        LogHelper.info("Initialization Complete","Initialization Complete");
+
     }
 
     @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-
+        LogHelper.info("Post Initialization Complete","Post Initialization Complete");
     }
 
 

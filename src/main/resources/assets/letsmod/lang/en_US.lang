@@ -1,0 +1,11 @@
+#English US Language file for Lets Mod project
+
+#Creative Tab
+itemGroup.tab_tutorial= Lets Mod
+itemGroup.tutorial_tab= Tutorial Mod Tab
+#Items
+item.mapleleaf.name=im supposed to be a Maple Leaf you bastard
+item.flag.name=Canadian flag of dullness
+
+#Blocks
+tile.flag.name=Canadian flag of dullness

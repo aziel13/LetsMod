@@ -1,0 +1,10 @@
+{
+
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "letsmod:blocks/MalachiteLogTop",
+    "side": "letsmod:blocks/MalachiteLog"
+
+  }
+
+}

@@ -5,7 +5,7 @@ package com.aziel13.letsmod.reference;
  */
 public class Reference {
 
-    public static final String MOD_ID = "LetsMod";
+    public static final String MOD_ID = "letsmod";
     public static final String MOD_NAME = "Lets Mod";
     public static final String MOD_VERSION = "1.10.2-1.0";
     public static final String CLIENT_PROXY_CLASS = "com.aziel13.letsmod.proxy.ClientProxy";
